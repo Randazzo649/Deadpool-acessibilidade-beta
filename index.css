@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(107, 20, 20);
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    align-items: center;
+}
+
+#opcoes{
+    margin-left: 2%;
+}
+
+#opcoes a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 4px;
+    font-size: 120%;
+}
+
+#opcoes a:hover {
+    color: rgb(255, 0, 0);
+}
+
+header img {
+    height: 10%;
+    width: 10%;
+}
+
+#deadpool {
+    display: flex;
+    align-items: center;
+}
+
+#pagina {
+    margin: 2%;
+    display: flex;
+}
+
+#botoes{
+    margin: 2%;
+}
+
+#introducao {
+    margin: 2%;
+}
+
+#introducao h2 {
+    color: black;
+    margin: 3%;
+    font-size: 150%;
+}
+
+#introducao p {
+    color: black;
+    margin: 1%;
+    font-size: 120%;
+}
+
+#baixavisao {
+    display: flex;
+    align-items: center;
+}
+
+#imgbaixavisao{
+    margin-top: 2%;
+    margin-right: 10%;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgbaixavisao p{
+    font-size: 14px;
+    color: #555;
+}
+
+#imgbaixavisao img{
+    width: auto;
+    height: auto;
+}
+
+#textobaixavisao {
+    margin-left: 5%;
+}
+
+#baixaaudicao {
+    display: flex;
+    align-items: center;
+}
+
+#imgbaixaudicao{
+    margin-top: 2%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+#imgbaixaaudicao p{
+    font-size: 14px;
+    color: #555;
+}
+
+#imgbaixaaudicao img {
+    width: 90%;
+    height: 90%;
+}
+
+#textobaixaaudicao {
+    margin-right: 8%;
+}
+
+#consideracoes {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#consideracoes h2 {
+    color: black;
+    margin: 3%;
+    font-size: 150%;
+}
+
+#consideracoes p {
+    color: black;
+    margin: 1%;
+    font-size: 120%;
+    padding-bottom: 5%;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="imagens/pngegg.png">
+    <title>Deadpool Acessibilidades</title>
+</head>
+<body>
+    <header>
+        <div id="deadpool">
+            <img src="imagens/deadpooljoinha_processed.webp" alt="Deadpool mostrando joinha">
+            <h1>DEADPOOL ACESSIBILIDADES</h1>
+        </div>
+        <nav id="opcoes">
+            <a href="index.html">Início</a>
+            <a href="abordados.html">Abordados</a>
+            <a href="vlibras.html">Vlibras</a>
+            <a href="padroes.html">Padrões</a>
+            <a href="agradecimentos.html">Considerações</a>
+        </nav>
+    </header>
+    <main>
+        <div id="pagina">
+            <div id="botoes">
+                <button id="aumentarFonte">Aumentar Fonte</button>
+                <button id="diminuirFonte">Diminuir Fonte</button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                    <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <section id="introducao">
+                <h2>Abordados neste site:</h2>
+                <div id="baixavisao">
+                    <div id="textobaixavisao">
+                        <h3>1 - Pessoas com deficiências visuais:</h3>
+                        <p>
+                            As pessoas com baixa visão podem ter diferentes níveis de perda de visão, incluindo cegueira total ou visão reduzida.
+                            Cegos dependem de leitores de tela ou dispositivos em braile e pessoas com baixa visão podem precisar de maior contraste,
+                            fontes ampliadas ou layouts simples. Soluções que podem ser utilizadas são textos alternativos para imagens, navegação por 
+                            teclado, contraste elevado e compatibilidade com leitores de tela.
+                        </p>
+                    </div>
+                    <div id="imgbaixavisao">
+                        <img src="imagens/pessoa com baixa visão.jpg">
+                        <p>
+                            "Pessoa com baixa visão enfrentando dificuldade para enxergar a tela do computador, destacando a importância de recursos como 
+                            contraste elevado e leitores de tela."
+                        </p>
+                    </div>
+                </div>
+                <div id="baixaaudicao">
+                    <div id="imgbaixaaudicao">
+                        <img src="imagens/Homem-fazendo-sinal-em-Libras-2.jpg" alt="Homem fazendo sinal em Libras">
+                        <p>
+                            "Homem utilizando sinais de Libras para se comunicar com o celular, demonstrando a relevância da inclusão de tecnologias 
+                            acessíveis para pessoas surdas."
+                        </p>
+                    </div>
+                    <div id="textobaixaaudicao">
+                        <h3>2 - Pessoas com Deficiência Auditiva:</h3>
+                        <p>
+                            Indivíduos surdos ou com perda auditiva enfrentam barreiras em conteúdos baseados em som, como vídeos sem legendas ou chamadas telefônicas.
+                            Soluções que podem ser utilizadas são inclusões de legendas em vídeos, transcrições para áudios e serviços de atendimento acessíveis via texto.
+                        </p>
+                    </div>
+                </div>
+                <div id="deficienteintelec">
+                    <div id="imgdeficienteintelc">
+                        <p></p>
+                    </div>
+                    <div id="textodefienteintelec">
+                        <h3>3 - Pessoas com Deficiência Cognitiva ou Intelectual:</h3>
+                        <p>
+                            Indivíduos que enfrentam desafios relacionados à compreensão, aprendizado, concentração ou memória. Exemplos incluem pessoas com 
+                            dislexia, que têm dificuldades em processar a leitura; indivíduos com Transtorno de Déficit de Atenção e Hiperatividade (TDAH), que 
+                            podem ter dificuldade em se concentrar por longos períodos; e aqueles com limitações intelectuais, que podem demandar mais tempo ou recursos 
+                            para interpretar informações.Soluções que podem ser utilizadas são informações claras e objetivas, layouts simples, uso mínimo de jargões e 
+                            recursos visuais que reforcem a comunicação.
+                        </p>
+                    </div>
+                </div>
+                
+        </div>
+    </main>
+    <script>
+        const alterarFonte = (acao) => {
+            const elementos = document.querySelectorAll('body, header a, #introducao h2, #introducao p');
+            elementos.forEach(elemento => {
+                const tamanhoAtual = parseFloat(window.getComputedStyle(elemento).fontSize);
+                const novoTamanho = acao === 'aumentar' ? tamanhoAtual + 2 : tamanhoAtual - 2;
+                elemento.style.fontSize = `${novoTamanho}px`;
+            });
+        };
+        const botaoAumentar = document.getElementById('aumentarFonte');
+        botaoAumentar.addEventListener('click', () => alterarFonte('aumentar'));
+        const botaoDiminuir = document.getElementById('diminuirFonte');
+        botaoDiminuir.addEventListener('click', () => alterarFonte('diminuir'));
+    </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

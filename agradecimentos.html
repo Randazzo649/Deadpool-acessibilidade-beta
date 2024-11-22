@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="imagens/pngegg.png">
+    <title>Deadpool Acessibilidades</title>
+</head>
+<body>
+    <header>
+        <div id="deadpool">
+            <img src="imagens/deadpooljoinha_processed.webp" alt="Deadpool mostrando joinha">
+            <h1>DEADPOOL ACESSIBILIDADES</h1>
+        </div>
+        <nav id="opcoes">
+            <a href="index.html">Início</a>
+            <a href="abordados.html">Abordados</a>
+            <a href="vlibras.html">Vlibras</a>
+            <a href="padroes.html">Padrões</a>
+            <a href="agradecimentos.html">Considerções</a>
+        </nav>
+    </header>
+    <main>
+        <div id="pagina">
+            <div id="botoes">
+                <button id="aumentarFonte">Aumentar Fonte</button>
+                <button id="diminuirFonte">Diminuir Fonte</button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                    <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <section id="consideracoes">
+                   <h2> Considerações:</h2>
+                   <p>
+                       Obrigado por ter visitado este site, a Deadpool Acessibilidades agradece sua visita ao site.
+                       Desculpe a ligeira falta de informações do site, caso você esteja interessado em mais informações
+                       de acessibilidade acesse o 
+                       <a href="https://repositorio.enap.gov.br/bitstream/1/2707/3/Modulo_2_Web_Acessivel_conteudista.pdf">eMAG_CONTEUDISTA_MOD_2</a>.
+                   </p>
+                   <img src="imagens/pngwing.com.png">
+            </section>
+        </div>
+    </main>
+    <script>
+        const alterarFonte = (acao) => {
+            const elementos = document.querySelectorAll('body, header a, #introducao h2, #introducao p');
+            elementos.forEach(elemento => {
+                const tamanhoAtual = parseFloat(window.getComputedStyle(elemento).fontSize);
+                const novoTamanho = acao === 'aumentar' ? tamanhoAtual + 2 : tamanhoAtual - 2;
+                elemento.style.fontSize = `${novoTamanho}px`;
+            });
+        };
+        const botaoAumentar = document.getElementById('aumentarFonte');
+        botaoAumentar.addEventListener('click', () => alterarFonte('aumentar'));
+        const botaoDiminuir = document.getElementById('diminuirFonte');
+        botaoDiminuir.addEventListener('click', () => alterarFonte('diminuir'));
+    </script>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>

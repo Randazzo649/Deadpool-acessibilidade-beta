@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="imagens/pngegg.png">
+    <title>Deadpool Acessibilidades</title>
+</head>
+<body>
+    <header>
+        <div id="deadpool">
+            <img src="imagens/deadpooljoinha_processed.webp" alt="Deadpool mostrando joinha">
+            <h1>DEADPOOL ACESSIBILIDADES</h1>
+        </div>
+        <nav id="opcoes">
+            <a href="index.html">Início</a>
+            <a href="abordados.html">Abordados</a>
+            <a href="vlibras.html">Vlibras</a>
+            <a href="padroes.html">Padrões</a>
+            <a href="agradecimentos.html">Considerações</a>
+        </nav>
+    </header>
+    <main>
+        <div id="pagina">
+            <div id="botoes">
+                <button id="aumentarFonte">Aumentar Fonte</button>
+                <button id="diminuirFonte">Diminuir Fonte</button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                    <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <section id="introducao">
+                <p>
+                    Aqui serão abordados alguma coisas que você pode utilizar para a criação de um site com acessibilidade.
+                    Lembrando que todas as informações dessa página foram retiradas do eMAG_CONTEUDISTA_MOD_2. 
+                </p>
+                <h2>1 - Títulos:</h2>
+                <p>
+                    Os cabeçalhos (títulos) em HTML são representados pelas tags h1 até h6.Assim, as tags
+                    h1, h2, h3, h4, h5 e h6 informam ao navegador que aquele elemento trata-se de
+                    um cabeçalho ("h" vem do inglês "heading", que significa cabeçalho). O "h1" deve ser o título
+                    principal da página, ou seja, deverá existir apenas um elemento "h1" em cada página. Em seguida
+                    devem ser utilizados os níveis subsequentes de título, de maneira hierárquica, sem se pular um
+                    ou mais níveis. A apresentação visual dos títulos poderá ser modificada pelas folhas de estilo.
+                    Imagine o seu conteúdo como sendo um livro. O título do livro seria o "h1", os capítulos seriam
+                    elementos "h2", os subcapítulos seriam representados por elementos "h3" e assim por diante.
+                    Dessa forma, o título principal de um sítio seria o "h1", o que nos leva a ter apenas um "h1" em
+                    cada página. O título do conteúdo principal passa a ser o "h2", as seções internas do conteúdo
+                    o "h3" e assim por diante.
+                    Por que é tão importante utilizar corretamente os títulos em um sítio?
+                    Para quem enxerga, basta diferenciar os títulos visualmente, pelo tamanho, tipo ou cor da fonte.
+                    No entanto, para quem não pode ver, essa diferenciação visual perde seu propósito. Pessoas
+                    que navegam pelos sítios utilizando um leitor de tela são informadas por esse software sobre o
+                    tipo de elemento pelo qual estão passando. Por exemplo, quando o usuário passar por um título
+                    dentro do conteúdo que foi inserido como um "h2", o leitor de tela irá ler algo do tipo "cabeçalho
+                    de nível 2, texto do cabeçalho”. Dessa forma, o usuário, mesmo sem enxergar, saberá que se
+                    trata de um título e conhecerá a hierarquia do conteúdo da página. Além disso, os leitores de
+                    tela permitem que os usuários naveguem rapidamente pelos dos títulos, pressionando a tecla
+                    "h”. Assim, poderão pular de título em título, compreendendo a hierarquia da página e chegando
+                    rapidamente ao conteúdo desejado.
+                </p>
+                <h2>2 - Links:</h2>
+                <p>
+                    Muitas pessoas utilizam apenas o mouse para navegar e nem imaginam que é possível navegar
+                    por meio da tecla TAB do teclado pelos elementos ativos de uma página. Isso inclui a navegação
+                    de link em link. Quando o usuário chega ao link desejado, basta ativá-lo pela tecla ENTER. Esse
+                    tipo de navegação é especialmente importante para pessoas que não conseguem utilizar o
+                    mouse, como é o caso de pessoas com problemas motores e de usuários com deficiência
+                    visual, que navegam utilizando um leitor de tela. É preciso considerar que, quando um usuário
+                    de leitor de tela navega pelos links de uma página,ele recebe apenas a informação do texto do
+                    link e não de todo o seu contexto.Os leitores de tela possuem uma tecla de atalho que permite ao
+                    usuário acessar a lista de todos
+                    os links da página. Essa é uma maneira fácil e rápida de ter acesso aos links. No entanto, se
+                    o texto dos links não for suficientemente descritivo, essa funcionalidade terá pouco valor. No
+                    exemplo a seguir, podemos ver uma parte da lista de links de uma página. Repare que existem
+                    vários links com o título "Edital”. O usuário irá navegar por eles e se perguntar: "edital do quê?”.
+                    O ideal para tornar esses links acessíveis é lhes fornecer um texto descritivo, como, por exemplo,
+                    "Edital do concurso para professor 2011” ou "Edital do Concurso Público 2010”, etc.Quando o seu 
+                    conteúdo contiver um link, é preciso que o mesmo seja claro e descritivo o
+                    suficiente, mesmo quando lido fora do contexto.
+                </p>
+                <h2>3 - Sumário para conteúdos longos:</h2>
+                <p>
+                    Para conteúdos muito extensos, o ideal é que seja fornecido um sumário com âncoras para as seções
+                    do conteúdo. Ao final de cada seção, é preciso haver umlink que permita retornar ao sumário. Para
+                    quem utiliza o mouse para navegar, parece uma tarefa simples rolar a tela e chegar até o conteúdo
+                    desejado. No entanto, para quem utiliza o teclado ou outros dispositivos diferentes do mouse,
+                    navegar por conteúdos extensos acaba sendo uma tarefa lenta e difícil. Para essas pessoas e até
+                    mesmo para as que utilizam o mouse, as âncoras facilitam muito a navegação.
+                    Ao clicarmos no link "Introdução”, o foco do teclado é remetido para o início dessa seção.
+                    Repare, no exemplo a seguir, no link "Voltar ao sumário”, presente no final da seção.
+                </p>
+                <h2>4 - Imagens:</h2>
+                <p>
+                    Pessoas cegas não terão acesso ao conteúdo transmitido por uma imagem caso não tenha sido
+fornecida uma descrição para ela. Dessa forma, é preciso descrever de maneira apropriada
+todas as imagens que transmitem conteúdo.
+Uma imagem pode ou não transmitir uma informação. Podemos tratar as imagens inseridas
+em uma página dividindo-as nos dois contextos abaixo:
+• Imagens com conteúdo: fotos, gráficos, organogramas, ilustrações, imagens que
+substituem botões ou links, etc.
+As imagens que apresentam conteúdo precisam de uma descrição. A descrição
+da imagem pode ser informada no próprio texto ou, então, por um atributo
+específico do elemento img no HTML, o atributo alt. A descrição fornecida por
+esse atributo não aparece visualmente, mas é lida pelo leitor de tela quando
+o usuário, navegando pelo teclado, passa pela imagem. Assim, mesmo que os
+usuários com deficiência visual não enxerguem a imagem, será informada a eles a
+sua descrição.
+• Imagens decorativas: utilizadas para decorar a página ou partes dela. Como exemplos,
+podemos citar marcadores de lista estilizados, cantos arredondados, ícones utilizados
+para decorar ou enfatizar um link, etc.
+As imagens decorativas devem ser ignoradas pelos recursos de tecnologia assistiva,
+ou seja, o ideal é que os leitores de tela ignorem a presença dessas imagens, já
+que elas não transmitem conteúdo. Para que isso ocorra, a maneira mais indicada
+é inserir todas as imagens decorativas por meio das folhas de estilo (CSS). Como
+alternativa, pode-se deixar o conteúdo do atributo "alt" vazio (alt=””), para que a
+imagem seja ignorada pelos leitores de tela.
+                </p>
+                <h3>Mas qual o limite para uma descrição ser considerada curta e poder ser disponibilizada pelo do atributo "alt"?</h3>
+                <p>Não existe uma restrição oficial para o tamanho do texto alternativo fornecido no "alt", mas
+                    especialistas recomendam que ele seja inferior a 125 caracteres, aproximadamente.</p>
+                <h3>Imagens complexas:</h3>
+                <p>Quem não pode
+                    ver, não terá acesso às suas informações. Nesse caso, primeiramente, precisamos fornecer
+                    uma alternativa textual para a imagem no atributo "alt". No entanto, esse atributo é utilizado
+                    para descrições sucintas, em poucas palavras ou em uma frase curta. No caso de gráficos e
+                    imagens complexas, precisamos fornecer uma descrição mais detalhada. A solução é fornecer
+                    as informações do gráfico no próprio contexto antes ou depois da imagem ou então em um
+                    link logo após a imagem.</p>
+            </section>
+        </div>
+    </main>
+    <script>
+        const alterarFonte = (acao) => {
+            const elementos = document.querySelectorAll('body, header a, #introducao h2, #introducao p');
+            elementos.forEach(elemento => {
+                const tamanhoAtual = parseFloat(window.getComputedStyle(elemento).fontSize);
+                const novoTamanho = acao === 'aumentar' ? tamanhoAtual + 2 : tamanhoAtual - 2;
+                elemento.style.fontSize = `${novoTamanho}px`;
+            });
+        };
+        const botaoAumentar = document.getElementById('aumentarFonte');
+        botaoAumentar.addEventListener('click', () => alterarFonte('aumentar'));
+        const botaoDiminuir = document.getElementById('diminuirFonte');
+        botaoDiminuir.addEventListener('click', () => alterarFonte('diminuir'));
+    </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

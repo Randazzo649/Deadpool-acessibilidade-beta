@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="imagens/pngegg.png">
+    <title>Deadpool Acessibilidades</title>
+</head>
+<body>
+    <header>
+        <div id="deadpool">
+            <img src="imagens/deadpooljoinha_processed.webp" alt="Deadpool mostrando joinha">
+            <h1>DEADPOOL ACESSIBILIDADES</h1>
+        </div>
+        <nav id="opcoes">
+            <a href="index.html">Início</a>
+            <a href="abordados.html">Abordados</a>
+            <a href="vlibras.html">Vlibras</a>
+            <a href="padroes.html">Padrões</a>
+            <a href="agradecimentos.html">Considerações</a>
+        </nav>
+    </header>
+    <main>
+        <div id="pagina">
+            <div id="botoes">
+                <button id="aumentarFonte">Aumentar Fonte</button>
+                <button id="diminuirFonte">Diminuir Fonte</button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                    <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <section id="introducao">
+                <h2>Objetivo deste site:</h2>
+                <p>
+                    Este site tem como objetivo de passar algumas informações sobre acessibilidades para outros e a sua importância.
+                </p>
+                <h2>Porque é necessário abordar sobre acessibilidade no meio digital?</h2>
+                <p>
+                    A acessibilidade beneficia todos, ampliando a inclusão e promovendo igualdade de acesso a oportunidades. Quando pensamos nas 
+                    diferentes pessoas que enfrentam barreiras, criamos soluções que tornam experiências melhores para todos, indo além do cumprimento 
+                    de leis e regulamentações. Afinal, um mundo acessível é um mundo mais justo e democrático.
+                </p>
+            </section>
+        </div>
+    </main>
+    <script>
+        const alterarFonte = (acao) => {
+            const elementos = document.querySelectorAll('body, header a, #introducao h2, #introducao p');
+            elementos.forEach(elemento => {
+                const tamanhoAtual = parseFloat(window.getComputedStyle(elemento).fontSize);
+                const novoTamanho = acao === 'aumentar' ? tamanhoAtual + 2 : tamanhoAtual - 2;
+                elemento.style.fontSize = `${novoTamanho}px`;
+            });
+        };
+        const botaoAumentar = document.getElementById('aumentarFonte');
+        botaoAumentar.addEventListener('click', () => alterarFonte('aumentar'));
+        const botaoDiminuir = document.getElementById('diminuirFonte');
+        botaoDiminuir.addEventListener('click', () => alterarFonte('diminuir'));
+    </script>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>
